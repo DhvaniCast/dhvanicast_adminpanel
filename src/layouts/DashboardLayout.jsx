@@ -4,6 +4,7 @@ import {
   DashboardOutlined,
   UserOutlined,
   RadarChartOutlined,
+  FlagOutlined,
   LogoutOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -34,6 +35,11 @@ const DashboardLayout = () => {
       key: '/frequencies',
       icon: <RadarChartOutlined />,
       label: 'Frequencies',
+    },
+    {
+      key: '/reports',
+      icon: <FlagOutlined />,
+      label: 'Reports',
     },
   ];
 

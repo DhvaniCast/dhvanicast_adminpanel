@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Users from './pages/Users';
 import Frequencies from './pages/Frequencies';
+import Reports from './pages/Reports';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="users" element={<Users />} />
             <Route path="frequencies" element={<Frequencies />} />
+            <Route path="reports" element={<Reports />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
