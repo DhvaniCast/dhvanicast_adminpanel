@@ -3,6 +3,7 @@ import { Form, Input, Button, Card, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -38,13 +39,25 @@ const Login = () => {
         borderRadius: '16px'
       }}>
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+          <img 
+            src={logo} 
+            alt="DhvaniCast Logo" 
+            style={{ 
+              width: '150px', 
+              height: 'auto', 
+              marginBottom: '20px',
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }} 
+          />
           <h1 style={{ 
             fontSize: '32px', 
             fontWeight: 'bold', 
             color: '#1a1a1a', 
             marginBottom: '8px' 
           }}>
-            HarborLeaf Radio
+            DhvaniCast
           </h1>
           <p style={{ color: '#666666', fontSize: '16px' }}>Admin Dashboard</p>
         </div>

@@ -11,6 +11,7 @@ import {
 } from '@ant-design/icons';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import logo from '../assets/logo.png';
 
 const { Header, Sider, Content } = Layout;
 
@@ -68,10 +69,20 @@ const DashboardLayout = () => {
           bottom: 0,
         }}
       >
-        <div style={{ height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid #1f1f1f' }}>
-          <h1 style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '20px', margin: 0 }}>
-            {collapsed ? 'HL' : 'HarborLeaf'}
-          </h1>
+        <div style={{ height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid #1f1f1f', padding: '8px' }}>
+          {collapsed ? (
+            <img 
+              src={logo} 
+              alt="HL" 
+              style={{ width: '40px', height: 'auto' }} 
+            />
+          ) : (
+            <img 
+              src={logo} 
+              alt="HarborLeaf Radio" 
+              style={{ width: '120px', height: 'auto' }} 
+            />
+          )}
         </div>
         <Menu
           theme="dark"
