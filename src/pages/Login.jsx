@@ -40,17 +40,17 @@ const Login = () => {
       }}>
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <div style={{ width: '90px', height: '90px', borderRadius: '50%', background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px auto' }}>
-            <img 
-              src={logo} 
-              alt="DhvaniCast Logo" 
-              style={{ width: '64px', height: '64px', borderRadius: '50%' }} 
+            <img
+              src={logo}
+              alt="DhvaniCast Logo"
+              style={{ width: '64px', height: '64px', borderRadius: '50%' }}
             />
           </div>
-          <h1 style={{ 
-            fontSize: '32px', 
-            fontWeight: 'bold', 
-            color: '#1a1a1a', 
-            marginBottom: '8px' 
+          <h1 style={{
+            fontSize: '32px',
+            fontWeight: 'bold',
+            color: '#1a1a1a',
+            marginBottom: '8px'
           }}>
             DhvaniCast
           </h1>
@@ -64,7 +64,7 @@ const Login = () => {
           size="large"
           autoComplete="off"
           initialValues={{
-            email: 'admin@harborleaf.com',
+            email: 'admin@dhvanicast.com',
             password: 'admin123'
           }}
         >

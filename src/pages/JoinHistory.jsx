@@ -33,9 +33,17 @@ export default function JoinHistory() {
 
             const response = await api.get('/frequencies/join-history/all', { params });
 
-            if (response.data.success) {
-                setJoinHistory(response.data.data.history);
-                setPagination(response.data.data.pagination);
+            console.log('📊 Join History Response:', response);
+
+            // API interceptor returns response.data, so response = { success, message, data }
+            if (response.success && response.data) {
+                setJoinHistory(response.data.history || []);
+                setPagination(prev => ({
+                    ...prev,
+                    ...response.data.pagination
+                }));
+            } else {
+                console.error('Invalid response structure:', response);
             }
         } catch (error) {
             console.error('Error fetching join history:', error);
@@ -176,19 +184,19 @@ export default function JoinHistory() {
                                             )}
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {entry.userName}
+                                            {entry.user?.name || entry.userName || 'Unknown User'}
                                             {entry.user?.mobile && (
                                                 <div className="text-xs text-gray-500">{entry.user.mobile}</div>
                                             )}
                                         </td>
                                         <td className="px-6 py-4 text-sm text-gray-900">
-                                            {entry.deviceName}
+                                            {entry.deviceName || 'N/A'}
                                         </td>
                                         <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate" title={entry.deviceInfo}>
-                                            {entry.deviceInfo}
+                                            {entry.deviceInfo || 'N/A'}
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 font-mono">
-                                            {entry.ipAddress}
+                                            {entry.ipAddress || 'N/A'}
                                         </td>
                                     </tr>
                                 ))
