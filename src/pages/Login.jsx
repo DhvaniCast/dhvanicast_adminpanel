@@ -29,7 +29,7 @@ const Login = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      background: 'linear-gradient(180deg, #0f0f0f 0%, #1c1c1c 50%, #2a2a2a 100%)',
       padding: '16px'
     }}>
       <Card style={{
